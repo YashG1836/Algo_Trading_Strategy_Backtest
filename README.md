@@ -22,6 +22,54 @@ This project uses Yahoo Finance data.
 3. Mean Reversion
 4. Breakout
 
+### 1) Moving Average Strategy
+This strategy compares 2 averages of price:
+- short moving average (fast)
+- long moving average (slow)
+
+Rule:
+- Buy signal when short average goes above long average (uptrend)
+- Exit/Sell signal when short average goes below long average (downtrend)
+
+Best use:
+- Works better in trending market
+- Can give late signals in sideway market
+
+### 2) Momentum Strategy (RSI Based)
+This strategy uses RSI (Relative Strength Index) to check if stock is overbought or oversold.
+
+Rule:
+- Buy signal when RSI is below 30 (stock may be oversold)
+- Sell signal when RSI is above 70 (stock may be overbought)
+
+Best use:
+- Useful when price moves in waves
+- Sometimes gives false signals in strong one-side trend
+
+### 3) Mean Reversion Strategy
+This strategy assumes price comes back near its average after moving too far.
+
+Rule:
+- Calculate rolling mean and standard deviation
+- Find Z-score (distance from mean)
+- Buy signal when Z-score is very low (price much below mean)
+- Sell signal when Z-score is very high (price much above mean)
+
+Best use:
+- Works better in range-bound market
+- Risky in strong breakout trend
+
+### 4) Breakout Strategy
+This strategy checks recent high and low range.
+
+Rule:
+- Buy signal when price breaks above previous rolling high
+- Sell signal when price breaks below previous rolling low
+
+Best use:
+- Works well when new trend starts after consolidation
+- Can give fake breakout signals sometimes
+
 ## How to run on your laptop
 ### 1) Install packages
 pip install -r requirements.txt
