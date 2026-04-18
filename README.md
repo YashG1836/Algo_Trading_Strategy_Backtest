@@ -86,4 +86,7 @@ streamlit run app.py
 5. Click Run Evaluation
 6. Check table + charts
 
-Made by Yash Goyal (YG)
+Made by Yash Goyal 
+
+
+Streamlit Demo: https://algotradingstrategybacktest.streamlit.app/
